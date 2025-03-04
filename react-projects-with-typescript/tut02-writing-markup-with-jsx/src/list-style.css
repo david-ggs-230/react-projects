@@ -1,66 +1,65 @@
-.listcontainer {
-  font-family: "Space Mono", monospace;
-  display: flex;
-  flex-direction: column;
-  max-width: 800px;
-  padding: 32px;
-  margin: 60px auto;
-  border: 1px solid #eee;
-  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.06);
-}
-
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizelegibility;
-  letter-spacing: -0.25px;
+.list-container {
+  max-width: 600px;
+  width:max-content;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
 }
 
 ol {
-  padding-left: 50px;
+  padding-left: 0;
+  counter-reset: list-counter;
 }
 
-li {
-  color: #4f4f4f;
-  padding-left: 16px;
-  margin-top: 24px;
-  position: relative;
-  font-size: 16px;
-  line-height: 20px;
+.list-item {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
 }
 
-li:before {
-  content: "";
-  display: block;
-  height: 42px;
-  width: 42px;
-  border-radius: 50%;
-  border: 2px solid #ddd;
-  position: absolute;
-  top: -12px;
-  left: -46px;
+.list-item div button {
+  border-radius: 8px;
+  border: 1px solid rgb(90, 95, 82);
+}
+.list-item-number {
+  font-weight: bold;
+  margin-right: 10px;
+  counter-increment: list-counter;
 }
 
-ol.alternating-colors li:nth-child(odd):before {
-  border-color: #0bad02;
+.list-item-number::before {
+  content: counter(list-counter) ". ";
 }
 
-ol.alternating-colors li:nth-child(even):before {
-  border-color: #2378d5;
+.list-item-content {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  flex-grow: 1;
 }
 
-.red-color{
+.list-item-content h3 {
+  margin: 0;
+  font-size: 1em;
+}
+
+.list-item-content p {
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+.red-color {
   color: #ff0000;
 }
 
-.blue-color{
+.blue-color {
   color: #0011ff;
 }
 
-.bg-red{
+.bg-red {
   background-color: #ff0000;
 }
 
-.bg-blue{
+.bg-blue {
   background-color: #0011ff;
 }
