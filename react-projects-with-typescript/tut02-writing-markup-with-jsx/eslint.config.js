@@ -44,4 +44,5 @@ export default tseslint
         ...react.configs["jsx-runtime"].rules,
       },
     },
-  ).concat(eslintPluginPrettier);
+  )
+  .concat(eslintPluginPrettier);
