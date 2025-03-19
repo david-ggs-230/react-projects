@@ -9,7 +9,7 @@ const FunctionComponentsDisplay = () => {
         <li className="list-item">
           <div className="list-item-number"></div>
           <div className="list-item-content">
-            <h3>useState</h3>
+            <h3>useEffect</h3>
             <div>
               <ComponentUseEffect />
             </div>
