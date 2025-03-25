@@ -1,0 +1,1 @@
+import{r as n,j as t}from"./index-ClwOJ03O.js";const s=()=>{const[r,e]=n.useState(0);if(r===3)throw new Error("Intentional error");return t.jsxs("div",{children:[t.jsx("h2",{className:"App",children:"About Page"}),t.jsx("h4",{children:r}),t.jsx("button",{onClick:()=>e(r+1),children:"Increment"})]})};export{s as default};
